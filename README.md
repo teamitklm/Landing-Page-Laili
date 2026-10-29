@@ -1,3 +1,35 @@
+# Laili Brand Website
+
+A responsive, Indonesian-language landing page introducing Laili Brand, its family-focused products, partnership opportunities, and free seminars. Built with plain HTML, CSS, and JavaScript, it runs as a static website without a database, backend, or build step.
+
+## Design reference
+
+Based on the [Laili Brand landing page in Figma](https://www.figma.com/design/qxtxokmFowVKcoGkR9hY46/Landing-Page-UI-Kit?node-id=1-2), screen `1:2`. The source design is 1440px wide; mobile layouts are adapted from that desktop frame. Figma node IDs remain in the HTML as `data-node-id` attributes for design traceability.
+
+## Website sections
+
+| Section | Content | Anchor |
+| --- | --- | --- |
+| Home | Brand introduction and navigation | `#home` |
+| About | Introduction to Laili Brand | `#about` |
+| Five pillars | Family and relationship values | `#pillars` |
+| Partnership | Business opportunities and consultation | `#partnership` |
+| Social media | Facebook, Instagram, and TikTok | `#social` |
+| Products | Scrollable product showcase | `#products` |
+| Free seminar | Seminar promotion and registration link | `#seminar` |
+| Testimonials | Partner and customer stories | `#testimonials` |
+| Mission | “Menuju 1 Juta Keluarga Berdaya” | `#mission` |
+| Footer | Address, contact information, and utility labels | `#contact` |
+
+The product showcase includes Milk Mee, Waiteu, Layali, SOP Laili, Laili Slim, and Laili Genwhite Series.
+
+## Features
+
+- Responsive desktop and mobile layouts.
+- In-page navigation and a catalogue dropdown linking to Milk Mee and Layali.
+- Scrollable product and testimonial sections with previous/next controls and position indicators.
+- WhatsApp links for partnership enquiries, consultation, and seminar registration.
+- Social media and footer contact links.
 - Local images, SVGs, and Montserrat font files, without temporary Figma asset URLs at runtime.
 - Keyboard focus styles, labelled carousel controls, and reduced-motion styling.
 
