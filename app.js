@@ -1,7 +1,4 @@
 // Local interactions require no build step or external services.
-const {chromium}=require('playwright');
-(async()=>{const b=await chromium.launch({channel:'chrome',headless:true});const p=await b.newPage({viewport:{width:1440,height:1000}});await p.goto('file:///C:/Users/Lenovo/Documents/Codex/2026-10-29/fig-2/outputs/laili-landing-page/index.html');console.log(await p.locator('.layer-21,.layer-269').evaluateAll(es=>es.map(e=>({layer:e.dataset.nodeId,shadow:getComputedStyle(e).boxShadow}))));await p.locator('#home').screenshot({path:'work/logo-fixed.png'});await p.locator('#seminar').screenshot({path:'work/seminar-fixed.png'});await b.close()})();
-
 const setPageScale = () =>
   document.documentElement.style.setProperty(
     "--page-scale",
