@@ -63,6 +63,7 @@ laili-landing-page/
 ├── index.html       # Content, sections, navigation, and image references
 ├── styles.css       # Base styling translated from Figma layers
 ├── layout.css       # Responsive layouts and component overrides
+├── mobile-art.css   # Fluid About and Seminar illustrations on phones
 ├── app.js           # Carousel interactions and artwork scaling
 ├── assets/          # Local PNG/SVG images and font files
 │   ├── Montserrat.ttf
