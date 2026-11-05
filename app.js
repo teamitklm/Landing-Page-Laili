@@ -8,7 +8,16 @@ window.addEventListener("resize", setPageScale);
 setPageScale();
 
 // Keep the complete hero photo and product artwork together on small screens.
-const heroArt = document.querySelector('.hero-art');
+const home = document.querySelector('#home');
+const heroArt = document.createElement('div');
+heroArt.className = 'hero-art';
+const heroScene = document.createElement('div');
+heroScene.className = 'hero-art-scene';
+['1:7', '1:27', '1:28'].forEach(id => {
+  heroScene.append(home.querySelector(`[data-node-id="${id}"]`));
+});
+heroArt.append(heroScene);
+home.append(heroArt);
 new ResizeObserver(() => {
   heroArt.style.setProperty('--hero-scale', heroArt.clientWidth / 440);
 }).observe(heroArt);
