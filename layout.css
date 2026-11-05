@@ -684,6 +684,7 @@ main {
 .hero-art-scene {
   display: contents;
 }
+/* Layer the wave between the family photograph and product cutouts. */
 #home [data-node-id="1:7"] { z-index: 0; }
 #home [data-node-id="1:26"] { z-index: 2; }
 #home [data-node-id="1:27"] { left: 713.12px; z-index: 4; }
