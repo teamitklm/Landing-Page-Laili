@@ -613,7 +613,17 @@ main {
   }
   #home {
     height: auto;
-    padding-bottom: 45px;
+    min-height: 720px;
+    padding-bottom: 140px;
+    isolation: isolate;
+  }
+  #home::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent 18%, rgba(110, 15, 15, 0.35) 40%, rgba(110, 15, 15, 0.62) 85%);
   }
   #home [data-node-id="1:4"] {
     height: 100%;
@@ -621,11 +631,16 @@ main {
   }
   .hero-art {
     display: block;
-    position: relative;
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    translate: -50% 0;
+    z-index: 1;
     width: 100%;
     max-width: 440px;
     aspect-ratio: 1;
-    margin: 25px auto 0;
+    margin: 0;
+    pointer-events: none;
   }
   .hero-art-scene {
     display: block;
@@ -636,6 +651,7 @@ main {
     transform-origin: top left;
   }
   #home [data-node-id="1:25"] {
+    z-index: 3;
     top: 28px;
     left: 24px;
   }
@@ -673,6 +689,7 @@ main {
   .hero-copy {
     margin: 182px 24px 0;
     width: auto;
+    z-index: 3;
   }
   .hero-copy > div:first-child p {
     font-size: 44px;
