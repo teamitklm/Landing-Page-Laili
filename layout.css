@@ -545,7 +545,7 @@ main {
   top: 26px;
   width: 100px;
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 135px;
+  font-size: 195px;
   font-style: italic;
   font-weight: 600;
   line-height: 1;
@@ -592,7 +592,7 @@ main {
   .review-card > p:nth-child(3) {
     top: 20px;
     width: 60px;
-    font-size: 80px;
+    font-size: 115px;
     -webkit-text-stroke-width: 0.7px;
   }
   .review-card > p:nth-child(2) { left: 18px; }
