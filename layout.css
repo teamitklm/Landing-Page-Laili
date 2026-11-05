@@ -531,6 +531,12 @@ main {
 .review-card > p:first-child {
   order: 3;
   margin-top: 28px;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  white-space: normal;
+  margin-left: auto;
+  margin-right: auto;
 }
 .review-card > p:nth-child(2),
 .review-card > p:nth-child(3) {
