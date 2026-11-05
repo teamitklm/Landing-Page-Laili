@@ -4,8 +4,6 @@
   font-weight: 100 900;
   font-display: swap;
 }
-/* Figma layer styles live in styles.css. These rules turn its text and
-   content groups into flow layouts while preserving the original image crops. */
 main > div {
   width: 100% !important;
   overflow: hidden;
@@ -602,23 +600,48 @@ main {
     zoom: var(--page-scale, 1);
   }
 }
+.hero-art,
+.hero-art-scene {
+  display: contents;
+}
 @media (max-width: 760px) {
   main {
     width: 100%;
     max-width: 100%;
   }
   #home {
-    height: 850px;
+    height: auto;
+    padding-bottom: 45px;
+  }
+  #home [data-node-id="1:4"] {
+    height: 100%;
+    width: 100%;
+  }
+  .hero-art {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    aspect-ratio: 1;
+    margin: 25px auto 0;
+  }
+  .hero-art-scene {
+    display: block;
+    position: absolute;
+    width: 440px;
+    height: 440px;
+    transform: scale(var(--hero-scale, 1));
+    transform-origin: top left;
   }
   #home [data-node-id="1:25"] {
     top: 28px;
     left: 24px;
   }
   #home [data-node-id="1:7"] {
-    width: 620px;
-    height: 620px;
-    left: 8%;
-    top: 340px;
+    width: 384px;
+    height: 384px;
+    left: 40px;
+    top: 0;
   }
   #home [data-node-id="1:7"] img {
     width: 100%;
@@ -630,7 +653,9 @@ main {
     right: 16px;
     padding: 14px 16px;
     gap: 16px;
-    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: visible;
     border-radius: 22px;
   }
   .navigation > a {
@@ -660,19 +685,16 @@ main {
     font-size: 15px;
     max-width: 340px;
   }
-  #home [data-node-id="1:7"] {
-    top: 480px;
-  }
   #home [data-node-id="1:27"] {
     left: 80px;
-    top: 545px;
-    scale: 0.7;
+    top: 60px;
+    scale: 0.55;
     transform-origin: bottom left;
   }
   #home [data-node-id="1:28"] {
     left: 0;
-    top: 545px;
-    scale: 0.65;
+    top: 85px;
+    scale: 0.55;
     transform-origin: bottom left;
   }
   #home [data-node-id="1:26"] {
