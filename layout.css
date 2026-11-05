@@ -611,7 +611,8 @@ main {
   }
   #home {
     height: auto;
-    padding-bottom: 45px;
+    padding-bottom: 65px;
+    background: linear-gradient(to bottom, #ffdada 0%, #9f1a1a 143.61%);
   }
   #home [data-node-id="1:4"] {
     height: 100%;
@@ -684,6 +685,9 @@ main {
     width: auto !important;
     font-size: 15px;
     max-width: 340px;
+    height: auto !important;
+    overflow: visible;
+    white-space: normal;
   }
   #home [data-node-id="1:27"] {
     left: 80px;
