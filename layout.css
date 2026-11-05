@@ -564,6 +564,22 @@ main {
 }
 #social [data-node-id="10:49"] {
   font-style: italic;
+    font-weight: 700;
+}
+#about [data-node-id="1:37"] {
+  font-style: italic;
+}
+.pillar-card > p {
+  width: calc(100% - 24px);
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+#partnership [data-node-id="1:101"] > .layer-167,
+#partnership [data-node-id="1:101"] > .layer-173,
+#testimonials [data-node-id="1:201"] > .layer-282,
+#testimonials [data-node-id="1:201"] > .layer-286 {
+  font-weight: 700;
 }
 @media (max-width: 760px) {
   .review-card > p:nth-child(2),
