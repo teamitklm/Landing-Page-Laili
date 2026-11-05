@@ -562,6 +562,9 @@ main {
 #home [data-node-id="1:5"] {
   font-style: italic;
 }
+#social [data-node-id="10:49"] {
+  font-style: italic;
+}
 @media (max-width: 760px) {
   .review-card > p:nth-child(2),
   .review-card > p:nth-child(3) {
