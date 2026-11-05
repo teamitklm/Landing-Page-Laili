@@ -4,6 +4,8 @@
   font-weight: 100 900;
   font-display: swap;
 }
+/* Figma layer styles live in styles.css. These rules turn its text and
+   content groups into flow layouts while preserving the original image crops. */
 main > div {
   width: 100% !important;
   overflow: hidden;
@@ -611,8 +613,7 @@ main {
   }
   #home {
     height: auto;
-    padding-bottom: 65px;
-    background: linear-gradient(to bottom, #ffdada 0%, #9f1a1a 143.61%);
+    padding-bottom: 45px;
   }
   #home [data-node-id="1:4"] {
     height: 100%;
