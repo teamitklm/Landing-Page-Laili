@@ -26,6 +26,7 @@ The product showcase includes Milk Mee, Waiteu, Layali, SOP Laili, Laili Slim, a
 ## Features
 
 - Responsive desktop and mobile layouts.
+- Mobile hero artwork scales to the phone width so the full family photo stays visible.
 - In-page navigation and a catalogue dropdown linking to Milk Mee and Layali.
 - Scrollable product and testimonial sections with previous/next controls and position indicators.
 - WhatsApp links for partnership enquiries, consultation, and seminar registration.
