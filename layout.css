@@ -486,6 +486,20 @@ main {
   height: auto;
   padding: 170px 0 90px;
 }
+#testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--brand);
+  z-index: 4;
+  pointer-events: none;
+}
+#seminar:after {
+  bottom: -1px;
+}
 #testimonials > [data-node-id="1:201"] {
   margin: 0 6.5% 60px;
 }
