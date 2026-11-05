@@ -1,0 +1,55 @@
+/* Preserve the desktop hero composition at phone widths. */
+@media (max-width: 760px) {
+  #home {
+    width: 1440px !important;
+    height: 728px;
+    min-height: 0;
+    padding: 0;
+    zoom: var(--page-scale, 1);
+  }
+  #home::after { display: none; }
+  #home .hero-art,
+  #home .hero-art-scene { display: contents; }
+  #home [data-node-id="1:4"] { width: 1440px; height: 728px; }
+  #home [data-node-id="1:25"] { top: 89px; left: 100px; }
+  #home [data-node-id="1:7"] {
+    width: 1021px;
+    height: 1021px;
+    left: 769px;
+    top: -161px;
+  }
+  #home .navigation {
+    top: 83px;
+    left: auto;
+    right: 123px;
+    padding: 16px 35px;
+    gap: 35px;
+    flex-wrap: nowrap;
+    border-radius: 40px;
+  }
+  #home .navigation > a { font-size: 20px !important; }
+  #home .catalog-menu { font-size: 20px; }
+  #home .hero-copy { margin: 175px 0 0 100px; width: 589px; }
+  #home .hero-copy > div:first-child p { font-size: 70px; }
+  #home .hero-copy h1 {
+    font-size: 70px;
+    max-width: none;
+    margin: 8px 0 26px;
+  }
+  #home .hero-copy > div:last-child {
+    width: 515px !important;
+    max-width: none;
+    font-size: 20px;
+  }
+  #home [data-node-id="1:27"] {
+    left: 653.12px;
+    top: 347px;
+    scale: none;
+  }
+  #home [data-node-id="1:28"] {
+    left: 539px;
+    top: 351.41px;
+    scale: none;
+  }
+  #home [data-node-id="1:26"] { top: 655px; bottom: auto; }
+}
