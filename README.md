@@ -4,29 +4,29 @@ A responsive, Indonesian-language landing page introducing Laili Brand, its fami
 
 ## Design reference
 
-Based on the [Laili Brand landing page in Figma](https://www.figma.com/design/qxtxokmFowVKcoGkR9hY46/Landing-Page-UI-Kit?node-id=1-2), screen `1:2`. The source design is 1440px wide; mobile layouts are adapted from that desktop frame. Figma node IDs remain in the HTML as `data-node-id` attributes for design traceability.
+Based on the [Laili Brand landing page in Figma](https://www.figma.com/design/qxtxokmFowVKcoGkR9hY46/Landing-Page-UI-Kit?node-id=1-2), desktop screen `1:2` (1440px) and mobile screen `104:532` (412px). The mobile layout now follows the dedicated mobile frame, including its header, centered sections, imagery, and compact typography. Figma node IDs remain in the HTML as `data-node-id` attributes for design traceability.
 
 ## Website sections
 
-| Section | Content | Anchor |
-| --- | --- | --- |
-| Home | Brand introduction and navigation | `#home` |
-| About | Introduction to Laili Brand | `#about` |
-| Five pillars | Family and relationship values | `#pillars` |
-| Partnership | Business opportunities and consultation | `#partnership` |
-| Social media | Facebook, Instagram, and TikTok | `#social` |
-| Products | Scrollable product showcase | `#products` |
-| Free seminar | Seminar promotion and registration link | `#seminar` |
-| Testimonials | Partner and customer stories | `#testimonials` |
-| Mission | “Menuju 1 Juta Keluarga Berdaya” | `#mission` |
-| Footer | Address, contact information, and utility labels | `#contact` |
+| Section      | Content                                          | Anchor          |
+| ------------ | ------------------------------------------------ | --------------- |
+| Home         | Brand introduction and navigation                | `#home`         |
+| About        | Introduction to Laili Brand                      | `#about`        |
+| Five pillars | Family and relationship values                   | `#pillars`      |
+| Partnership  | Business opportunities and consultation          | `#partnership`  |
+| Social media | Facebook, Instagram, and TikTok                  | `#social`       |
+| Products     | Scrollable product showcase                      | `#products`     |
+| Free seminar | Seminar promotion and registration link          | `#seminar`      |
+| Testimonials | Partner and customer stories                     | `#testimonials` |
+| Mission      | “Menuju 1 Juta Keluarga Berdaya”                 | `#mission`      |
+| Footer       | Address, contact information, and utility labels | `#contact`      |
 
 The product showcase includes Milk Mee, Waiteu, Layali, SOP Laili, Laili Slim, and Laili Genwhite Series.
 
 ## Features
 
 - Responsive desktop and mobile layouts.
-- Mobile hero artwork scales to the phone width so the full family photo stays visible.
+- A mobile header with an accessible hamburger menu, centered hero text, and the mobile-specific family photo.
 - In-page navigation and a catalogue dropdown linking to Milk Mee and Layali.
 - Scrollable product and testimonial sections with previous/next controls and position indicators.
 - WhatsApp links for partnership enquiries, consultation, and seminar registration.
@@ -64,6 +64,8 @@ laili-landing-page/
 ├── styles.css       # Base styling translated from Figma layers
 ├── layout.css       # Responsive layouts and component overrides
 ├── mobile-art.css   # Fluid About and Seminar illustrations on phones
+├── mobile-hero.css  # Earlier hero overrides superseded by mobile-design.css
+├── mobile-design.css # Dedicated 412px Figma mobile design, loaded last
 ├── app.js           # Carousel interactions and artwork scaling
 ├── assets/          # Local PNG/SVG images and font files
 │   ├── Montserrat.ttf
@@ -92,7 +94,7 @@ The main color variables are defined in `styles.css`:
 
 Some exported gradients contain literal colors, so changing these variables alone will not recolor every layer. Use `layout.css` for layout, spacing, and responsive adjustments.
 
-The mobile breakpoint is 760px. Intermediate widths use scaling based on the original 1440px composition. Layered illustrations use JavaScript and `ResizeObserver` to maintain their proportions.
+The mobile breakpoint is 760px. `mobile-design.css` scales the dedicated 412px design to the device width using `--mobile-unit`. At tablet widths above that breakpoint, the desktop composition scales from 1440px. Layered illustrations also use JavaScript and `ResizeObserver` where needed. Keep `mobile-design.css` last in the stylesheet order.
 
 ### Images and logos
 
@@ -104,12 +106,12 @@ Avoid applying rectangular `box-shadow` effects to transparent cutout wrappers. 
 
 Search `index.html` for the current destinations:
 
-| Channel | Destination |
-| --- | --- |
-| WhatsApp | `https://wa.me/6281234226384` |
+| Channel   | Destination                             |
+| --------- | --------------------------------------- |
+| WhatsApp  | `https://wa.me/6281234226384`           |
 | Instagram | `https://www.instagram.com/lailibrand/` |
-| Facebook | `https://www.facebook.com/lailibrand` |
-| TikTok | `https://www.tiktok.com/@lailibrand` |
+| Facebook  | `https://www.facebook.com/lailibrand`   |
+| TikTok    | `https://www.tiktok.com/@lailibrand`    |
 
 The seminar link includes a prefilled registration message. Update every occurrence when changing a destination, including the footer.
 
@@ -121,13 +123,13 @@ Montserrat is bundled locally, with its license in `assets/Montserrat-OFL.txt`. 
 
 This is a promotional landing page. It does not include checkout, accounts, inventory management, form submission services, or payment processing.
 
-| Item | Current behavior |
-| --- | --- |
-| Marketplace | Scrolls to the product showcase; no store is connected. |
-| Seminar registration | Opens WhatsApp with a prefilled message. |
-| Partnership and consultation | Open WhatsApp rather than submitting an on-site form. |
-| Pillars “Learn more” | Links to the pillars section; no separate details page exists. |
-| Footer utilities | Shipping & Return, Privacy Policy, Term of Use, Wishlist, Compare, and Subscribe remain text labels without destination pages or functionality. |
+| Item                         | Current behavior                                                                                                                                |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Marketplace                  | Scrolls to the product showcase; no store is connected.                                                                                         |
+| Seminar registration         | Opens WhatsApp with a prefilled message.                                                                                                        |
+| Partnership and consultation | Open WhatsApp rather than submitting an on-site form.                                                                                           |
+| Pillars “Learn more”         | Links to the pillars section; no separate details page exists.                                                                                  |
+| Footer utilities             | Shipping & Return, Privacy Policy, Term of Use, Wishlist, Compare, and Subscribe remain text labels without destination pages or functionality. |
 
 Confirm the phone number, social accounts, address, product information, and testimonials before publishing.
 
@@ -139,7 +141,7 @@ After deployment, check that images, fonts, stylesheets, scripts, navigation anc
 
 ## Verification and maintenance
 
-The implementation has been checked in Chrome at 1440px and 390px widths for image loading, JavaScript errors, page-wide horizontal overflow, and product carousel navigation. Targeted browser checks were also used for the subsequent shadow and paragraph-spacing fixes. This is not a full cross-browser or accessibility audit.
+The current implementation has been checked in Chrome at 320px, 390px, 412px, 430px, 760px, 768px, and 1440px widths for image loading, JavaScript errors, and page-wide horizontal overflow. The mobile menu opens and closes with its button, closes on navigation or Escape, and both carousels advance. The 412px page was visually compared with Figma mobile frame `104:532`. This is not a full cross-browser or accessibility audit.
 
 After changes, verify:
 
